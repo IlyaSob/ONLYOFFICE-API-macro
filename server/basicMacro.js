@@ -1,6 +1,6 @@
 (function () {
   const oWorksheet = Api.GetActiveSheet();
-  const query = oWorksheet.GetRange("A11").GetValue();
+  const query = oWorksheet.GetRange("A1").GetValue();
 
   //api url. Consumes available requests
   const url = `http://localhost:3000/search?query=${query}`;
@@ -20,7 +20,7 @@
     const link = results.map((i) => i.link);
 
     //insert titles
-    let nRowTitle = 0;
+    let nRowTitle = 2;
     for (let i = 0; i < title.length; i++) {
       const text = JSON.stringify(title[i]);
       oWorksheet.GetRangeByNumber(nRowTitle, 0).SetValue(text);
@@ -29,7 +29,7 @@
     }
 
     //insert links parallel to the titles
-    let nRowLink = 0;
+    let nRowLink = 2;
     for (let i = 0; i < link.length; i++) {
       const text = JSON.stringify(link[i]);
       oWorksheet.GetRangeByNumber(nRowLink, 1).SetValue(text);
