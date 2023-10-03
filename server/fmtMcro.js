@@ -25,10 +25,9 @@
   };
 
   const button = () => {
-    var oWorksheet = Api.GetActiveSheet();
-    var oFill = Api.CreateSolidFill(Api.CreateRGBColor(36, 160, 237));
-    var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
-    var oShape = oWorksheet.AddShape(
+    let oFill = Api.CreateSolidFill(Api.CreateRGBColor(36, 160, 237));
+    let oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+    let oShape = oWorksheet.AddShape(
       "rect",
       34 * 36000,
       15 * 36000,
@@ -39,9 +38,9 @@
       1,
       0
     );
-    var oDocContent = oShape.GetContent();
-    var oParagraph = oDocContent.GetElement(0);
-    var oParaPr = oParagraph.GetParaPr();
+    let oDocContent = oShape.GetContent();
+    let oParagraph = oDocContent.GetElement(0);
+    let oParaPr = oParagraph.GetParaPr();
     oParaPr.SetJc("center");
     oParagraph.AddText("Assign the MAIN MACRO to this shape");
   };

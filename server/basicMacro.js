@@ -39,11 +39,8 @@
   };
 
   function reloadCellValues() {
-    let reload = setInterval(function () {
+    let reload = setTimeout(function () {
       Api.asc_calculate(Asc.c_oAscCalculateType.All);
-    });
-    let clear = setTimeout(function () {
-      clearInterval(reload);
     }, 5000);
   }
 

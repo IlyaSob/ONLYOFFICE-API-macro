@@ -12,29 +12,30 @@
   function populate(count, title, link) {
     let nRowTitle = 9;
     for (let j = 0; j < title.length; j++) {
+      let passedTitleCount = count * 3;
       const text = JSON.stringify(title[j]);
-      oWorksheet.GetRangeByNumber(nRowTitle + j, count * 3).SetValue(text);
       oWorksheet
-        .GetRangeByNumber(nRowTitle + j, count * 3)
+        .GetRangeByNumber(nRowTitle + j, passedTitleCount)
+        .SetValue(text);
+      oWorksheet
+        .GetRangeByNumber(nRowTitle + j, passedTitleCount)
         .AutoFit(false, true);
     }
 
     let nRowLink = 9;
     for (let h = 0; h < link.length; h++) {
+      let passedLinkCount = count * 3 + 1;
       const text = JSON.stringify(link[h]);
-      oWorksheet.GetRangeByNumber(nRowLink + h, count * 3 + 1).SetValue(text);
+      oWorksheet.GetRangeByNumber(nRowLink + h, passedLinkCount).SetValue(text);
       oWorksheet
-        .GetRangeByNumber(nRowLink + h, count * 3 + 1)
+        .GetRangeByNumber(nRowLink + h, passedLinkCount)
         .AutoFit(false, true);
     }
   }
 
   function reloadCellValues() {
-    let reload = setInterval(function () {
+    let reload = setTimeout(function () {
       Api.asc_calculate(Asc.c_oAscCalculateType.All);
-    });
-    let clear = setTimeout(function () {
-      clearInterval(reload);
     }, 5000);
   }
 
