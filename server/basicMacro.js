@@ -32,7 +32,8 @@
     let nRowLink = 2;
     for (let i = 0; i < link.length; i++) {
       const text = JSON.stringify(link[i]);
-      oWorksheet.GetRangeByNumber(nRowLink, 1).SetValue(text);
+      const textWithoutQuotes =  text.replace(/"/g,'');
+      oWorksheet.GetRangeByNumber(nRowLink, 1).SetValue(textWithoutQuotes);
       oWorksheet.GetRangeByNumber(nRowLink, 1).AutoFit(false, true);
       nRowLink++;
     }

@@ -26,7 +26,8 @@
     for (let h = 0; h < link.length; h++) {
       let passedLinkCount = count * 3 + 1;
       const text = JSON.stringify(link[h]);
-      oWorksheet.GetRangeByNumber(nRowLink + h, passedLinkCount).SetValue(text);
+      const textWithoutQuotes = text.replace(/"/g,'');
+      oWorksheet.GetRangeByNumber(nRowLink + h, passedLinkCount).SetValue(textWithoutQuotes);
       oWorksheet
         .GetRangeByNumber(nRowLink + h, passedLinkCount)
         .AutoFit(false, true);
