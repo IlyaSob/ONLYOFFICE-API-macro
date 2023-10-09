@@ -1,0 +1,85 @@
+# OS and Editor files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Dependency directories
+pypi_packages/
+venv/
+env/
+lib/
+lib64/
+__pycache__/
+bin/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyc
+
+# Logs and databases
+*.log
+*.sqlite3
+*.sqlite
+db.sqlite3
+db.sqlite
+
+# IDE and text editor specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Media files
+*.jpg
+*.jpeg
+# *.png
+*.gif
+*.ico
+*.mov
+*.mp4
+*.mpeg
+*.avi
+*.woff
+*.ttf
+*.eot
+*.svg
+
+# Archives
+*.zip
+*.rar
+*.gz
+*.tar.gz
+*.7z
+
+# Compiled Python files
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment files
+.env
+
+# User-specific files
+.vscode/
+.DS_Store
