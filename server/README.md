@@ -60,7 +60,7 @@ After you have successfully setup the Proxy Server, the Basic macro can be setup
 - Copy the contents of basicMacro.js file from this repository.
 - Open the Plugins Tab in the Spreadsheet, and click on Macros.
 - Paste the contents of the basicMacro.js file and create a new macro. Click 'OK' to save the macro.
-- Enter the query you want to search for in the A11 cell. Save the changes.
+- Enter the query you want to search for in the A1 cell. Save the changes. Note: Your changes won't be saved to the spreadsheet if the cursor is still in the A1 cell. Make sure the cursor is not in editing mode.
 - Run the macro.
 
 ## Advanced Macro Setup
